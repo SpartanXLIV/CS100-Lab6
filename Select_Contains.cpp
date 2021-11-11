@@ -1,6 +1,7 @@
 #include <iostream>
+#include select.hpp
 
-class Select_Contains :: Select {
+class Select_Contains::select {
   private:
   int 
 }
