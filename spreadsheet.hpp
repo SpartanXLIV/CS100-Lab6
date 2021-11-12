@@ -15,6 +15,7 @@ class Spreadsheet
     Select* select = nullptr;
 
 public:
+    Spreadsheet(); 		//declared a constructor
     ~Spreadsheet();
 
     const std::string& cell_data(int row, int column) const
@@ -30,7 +31,7 @@ public:
     void set_selection(Select* new_select);
 
     // TODO: Implement print_selection.
-    void print_selection(std::ostream& out) const;
+    void print_selection(std::ostream& out) const; // implemented in spreadsheet.cpp
 
     void clear();
     void set_column_names(const std::vector<std::string>& names);
