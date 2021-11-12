@@ -3,6 +3,7 @@
 
 #include <string>	//added
 #include <cstring>
+#include "spreadsheet.hpp"
 
 class Select
 {
