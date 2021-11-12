@@ -21,12 +21,12 @@ public:
 // classes need only implement the new select function.  You may choose to
 // derive from Select or Select_Column at your convenience.
 
-class Select_Default : public Select						//added
+class Select_Construct_Helper : public Select						//added
 {
 public:
 	virtual bool select(const Spreadsheet* sheet, int row) const
 	{
-		return 1;
+		return 1;							//stops an empty from just being null or garbage
 	}
 };
 

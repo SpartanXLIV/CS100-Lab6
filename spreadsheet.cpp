@@ -6,7 +6,7 @@
 
 Spreadsheet::Spreadsheet()			//Declared a constructor
 {
-	select = new Select_Default();
+	select = new Select_Construct_Helper();
 }
 
 Spreadsheet::~Spreadsheet()
@@ -41,16 +41,15 @@ void Spreadsheet::add_row(const std::vector<std::string>& row_data)
 void Spreadsheet::print_selection(std::ostream& out) const			//DEFINED PRINT_SELECTION
 {	
 
-	for(int i = 0; i < this->data.size(); i++)
-	{
-		if(select->select(this,i))
+	for(int i = 0; i < this->data.size(); i++)			//Version like 38 of this,
+	{								//I dont know lol
+		if(select->select(this,i))				
 		{
 			for(auto j : data.at(i))
 				out << j << " ";
 			out << std::endl;
 		}
 	}
-
 
 
 									//IS THIS RIGHT??
